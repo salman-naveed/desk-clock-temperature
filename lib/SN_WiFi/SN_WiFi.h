@@ -4,6 +4,8 @@
 #include <ESP8266mDNS.h>
 #include <ESP8266WebServer.h> 
 
+#define  MAX_REST_MESSAGE_SIZE 1450
+
 
 void SN_WiFi_Init();
 
@@ -16,4 +18,6 @@ void SN_WiFi_printlocalIP();
 void SN_WiFi_printSSID();
 
 void SN_WiFi_startWebServer();
+
+void SN_WiFi_handleClient();
 

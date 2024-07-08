@@ -42,5 +42,8 @@ void loop() {
     default:
       break;
   }
+
+  SN_WiFi_handleClient();
+
 }
 

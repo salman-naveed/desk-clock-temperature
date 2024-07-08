@@ -18,18 +18,22 @@ const char * days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "
 const char * months[] = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"} ;
 const char * ampm[] = {"AM", "PM"} ;
 
-char temperature[] = " 00.0 C"; // "Temp = 00.0 C  "
+char temperature[] = " 00 C"; // "Temp = 00.0 C  "
 char humidity[]    = " 00 %"; // "RH   = 00.0 %  ";
 
 
 void SN_LCD_I2C_Init() {
-    lcd.begin(LCD_SDA, LCD_SCL);                    // Initialize I2C LCD module (SDA = GPIO0, SCL = GPIO2)
+    lcd.begin(LCD_SDA, LCD_SCL);        // Initialize I2C LCD module (SDA = GPIO0, SCL = GPIO2)
     lcd.backlight();                    // Turn backlight ON
     lcd.setCursor(0, 0);                // Set cursor to first column of first row
     lcd.print("Initializing...");       // Print message on LCD
+    // lcd.autoscroll();
+
     SN_Logger_Log(true, "SN_LCD_I2C", "LCD Initialized");
+    
     delay(2000);                        // Wait for 2 seconds
-    SN_LCD_I2C_Clear();                  // Clear LCD screen
+    
+    SN_LCD_I2C_Clear();                 // Clear LCD screen
 }
 
 void SN_LCD_I2C_Clear() {
@@ -40,7 +44,12 @@ void SN_LCD_I2C_Clear() {
 void SN_LCD_I2C_print(String message) {
     lcd.setCursor(0, 0);                // Set cursor to first column of first row
     lcd.print(message);                 // Print message on LCD
+
     SN_Logger_Log(true, "SN_LCD_I2C", "Printing message on LCD");
+}
+
+void SN_LCD_I2C_autoscroll() {
+    lcd.autoscroll();
 }
 
 void SN_LCD_I2C_clockDisplay() {
@@ -103,36 +112,18 @@ void SN_LCD_I2C_clockDisplay() {
 
     temperature[1] = (Temp / 100) % 10 + '0';
     temperature[2] = (Temp / 10) % 10 + '0';
-    temperature[4] = Temp % 10 + '0';
+    temperature[3] = (char)223;
+    // temperature[4] = Temp % 10 + '0';
 
     humidity[1] = (RH / 100) % 10 + '0';
     humidity[2] = (RH / 10) % 10 + '0';
     // humidity[4] = RH % 10 + '0';
 
-    // ----------------- Display date and time on LCD -----------------
+    // ----------------- Display date, time, temperature and humidity on LCD -----------------
 
     SN_LCD_I2C_Clear();
 
     lcd.setCursor(0, 0);
-
-    // // lcd.print("Date: ");
-    // lcd.print(d);
-    // lcd.print("/");
-    // lcd.print(mo);
-    // lcd.print("/");
-    // lcd.print(y);
-
-    
-
-    // lcd.setCursor(0, 1);
-
-    // // lcd.print("Time: ");
-    // lcd.print(h);
-    // lcd.print(":");
-    // lcd.print(m);
-    // lcd.print(":");
-    // lcd.print(s);
-
     if (d < 10) lcd.print('0');
     lcd.print(d);
     lcd.print("/");
@@ -153,18 +144,7 @@ void SN_LCD_I2C_clockDisplay() {
     lcd.print(":");
     if (s < 10) lcd.print('0');
     lcd.print(s);
-    lcd.print(" ");
+    lcd.print("   ");
     lcd.print(humidity);
-
-    // ----------------- Display temperature and humidity on LCD -----------------
-
-    // lcd.setCursor(0, 2);
-    // lcd.print(temperature);
-
-    // lcd.setCursor(0, 3);
-    // lcd.print(humidity);
-
-
-
     
 }

@@ -1,8 +1,10 @@
-adafruit/RTClib@^2.1.4
-arduino-libraries/NTPClient@^3.2.1
-SPI
 adafruit/Adafruit Unified Sensor@^1.1.9
-jchristensen/Timezone@^1.2.4
 adafruit/DHT sensor library@^1.4.4
+ArduinoJson@5.13.4
+densaugeo/base64@^1.4.0
 paulstoffregen/Time@^1.6.1
+adafruit/RTClib@^2.1.4
+SPI
+arduino-libraries/NTPClient@^3.2.1
+jchristensen/Timezone@^1.2.4
 me-no-dev/ESPAsyncUDP
