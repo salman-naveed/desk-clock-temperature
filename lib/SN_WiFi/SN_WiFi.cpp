@@ -10,10 +10,10 @@
 
 extern int CURRENT_STATE;
 
-ESP8266WebServer SN_WebServer(80);
+ESP8266WebServer SN_WebServer(80);  
 
-const char* ssid = "Wayne_ENT";     //"Salman_C25"; //"Wayne_ENT";   // insert your own ssid 
-const char* password = "12345678";   
+const char* ssid = "WIFI_SSID";     // insert your own ssid 
+const char* password = "WIFI_PASSWORD"; // insert your own password
 
 
 void SN_WiFi_Init() {

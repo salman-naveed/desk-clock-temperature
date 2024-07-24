@@ -9,6 +9,7 @@
             "name": "PlatformIO",
             "includePath": [
                 "/Users/salman/Desktop/Salman_Personal/Projects/GithubRepos/desk-clock-temperature/src",
+                "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src",
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA",
                 "/Users/salman/Desktop/Salman_Personal/Projects/GithubRepos/desk-clock-temperature/lib/SN_DHT",
                 "/Users/salman/Desktop/Salman_Personal/Projects/GithubRepos/desk-clock-temperature/lib/SN_Time",
@@ -41,7 +42,6 @@
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src",
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM",
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src",
-                "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src",
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src",
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR",
                 "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS",
@@ -75,6 +75,7 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
                     "/Users/salman/Desktop/Salman_Personal/Projects/GithubRepos/desk-clock-temperature/src",
+                    "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src",
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA",
                     "/Users/salman/Desktop/Salman_Personal/Projects/GithubRepos/desk-clock-temperature/lib/SN_DHT",
                     "/Users/salman/Desktop/Salman_Personal/Projects/GithubRepos/desk-clock-temperature/lib/SN_Time",
@@ -107,7 +108,6 @@
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src",
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM",
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src",
-                    "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src",
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src",
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR",
                     "/Users/salman/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS",
